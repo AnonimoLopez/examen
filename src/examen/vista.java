@@ -191,7 +191,17 @@ public class vista extends javax.swing.JFrame {
                 }
             }
             
+            int dialogResult = JOptionPane.showConfirmDialog(null, "TERMINAR COMPRA","Confirmar salida", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (dialogResult == JOptionPane.YES_OPTION){
             descuento();
+            jButton1.setEnabled(false);
+            }
+            
+            if (contador==4){
+            descuento();
+            jButton1.setEnabled(false);
+            }
+            
             
         }
         }
@@ -230,6 +240,7 @@ public class vista extends javax.swing.JFrame {
             }
             
             contador=0;
+            jButton1.setEnabled(true);
     }
     
     
